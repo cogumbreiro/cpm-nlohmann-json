@@ -9,7 +9,8 @@ CPM_AddModule("cpm-catch"
   GIT_REPOSITORY "https://github.com/bcachet/cpm-catch")
 ```
 
-Add this to your C++ code to use Catch:
+Add this to your C++ code to use [Catch](https://github.com/philsquared/Catch):
 ```c++
 #include <catch.hpp>
 ```
+

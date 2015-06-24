@@ -1,5 +1,6 @@
 # cpm-catch
-CPM external for Catch testing library
+[CPM](http://cpm.rocks) external for
+[Catch](https://github.com/philsquared/Catch) testing library.
 
 ## Usage
 
@@ -9,7 +10,7 @@ CPM_AddModule("cpm-catch"
   GIT_REPOSITORY "https://github.com/bcachet/cpm-catch")
 ```
 
-Add this to your C++ code to use [Catch](https://github.com/philsquared/Catch):
+Add this to your C++ code to use Catch:
 ```c++
 #include <catch.hpp>
 ```

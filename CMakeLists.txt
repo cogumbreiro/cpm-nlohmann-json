@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 #-----------------------------------------------------------------------
 # CPM configuration
 #-----------------------------------------------------------------------
-set(CPM_MODULE_NAME catch)
+set(CPM_MODULE_NAME nlohmann-json)
 set(CPM_LIB_TARGET_NAME ${CPM_MODULE_NAME})
 
 if ((DEFINED CPM_DIR) AND (DEFINED CPM_UNIQUE_ID) AND (DEFINED CPM_TARGET_NAME))
@@ -34,16 +34,16 @@ CPM_ForceOnlyOneModuleVersion()
 CPM_InitModule(${CPM_MODULE_NAME})
 
 #------------------------------------------------------------------------------
-# Catch 
+# nlohmann/json
 #------------------------------------------------------------------------------
-# Catch as a subdirectory so that it can capture your compiler flags
-set(CATCH_DIR ${CMAKE_CURRENT_SOURCE_DIR}/3rdParty/catch)
+# json as a subdirectory so that it can capture your compiler flags
+set(NLOHMANN_JSON_DIR ${CMAKE_CURRENT_SOURCE_DIR}/3rdParty/nlohmann-json)
 CPM_EnsureRepoIsCurrent(
-  TARGET_DIR ${CATCH_DIR}
-  GIT_REPOSITORY "https://github.com/philsquared/Catch.git"
+  TARGET_DIR ${NLOHMANN_JSON_DIR}
+  GIT_REPOSITORY "https://github.com/nlohmann/json/"
   GIT_TAG origin/master
   USE_CACHING TRUE
   )
 
-CPM_ExportAdditionalIncludeDir("${CATCH_DIR}/single_include")
+CPM_ExportAdditionalIncludeDir("${NLOHMANN_JSON_DIR}/src")
 
